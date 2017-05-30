@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="SellersDajo:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="SellersDajo.war">
+      <element id="artifact" artifact-name="SellersDajo:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="Kotan">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.2">
+    <root id="1"/>
+    <schema id="2" parent="1" name="dajoSellers">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="cinema"/>
+    <schema id="4" parent="1" name="dayjo"/>
+    <schema id="5" parent="1" name="information_schema"/>
+    <schema id="6" parent="1" name="mysql"/>
+    <schema id="7" parent="1" name="performance_schema"/>
+    <schema id="8" parent="1" name="sys"/>
+    <schema id="9" parent="1" name="dajoSe"/>
+    <table id="10" parent="2" name="APP_USER"/>
+    <table id="11" parent="2" name="APP_USER_USER_PRODUCTS"/>
+    <table id="12" parent="2" name="APP_USER_USER_PROFILE"/>
+    <table id="13" parent="2" name="USER_PRODUCTS"/>
+    <table id="14" parent="2" name="USER_PROFILE"/>
+    <table id="15" parent="2" name="persistent_logins"/>
+    <column id="16" parent="10" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="17" parent="10" name="ident_id">
+      <Position>2</Position>
+      <DataType>int(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="18" parent="10" name="password">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="19" parent="10" name="first_name">
+      <Position>4</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="20" parent="10" name="last_name">
+      <Position>5</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="21" parent="10" name="email">
+      <Position>6</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="22" parent="10" name="ident_id">
+      <ColNames>ident_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="23" parent="10" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="24" parent="10" name="ident_id">
+      <ColNames>ident_id</ColNames>
+      <UnderlyingIndexName>ident_id</UnderlyingIndexName>
+    </key>
+    <column id="25" parent="11" name="user_id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="26" parent="11" name="user_products_id">
+      <Position>2</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="27" parent="11" name="FK_USER_PRODUCTS">
+      <ColNames>user_products_id</ColNames>
+    </index>
+    <key id="28" parent="11" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>user_id
+user_products_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="29" parent="11" name="FK_APP_USER_2">
+      <ColNames>user_id</ColNames>
+      <RefSchemaName>dajoSellers</RefSchemaName>
+      <RefTableName>APP_USER</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="30" parent="11" name="FK_USER_PRODUCTS">
+      <ColNames>user_products_id</ColNames>
+      <RefSchemaName>dajoSellers</RefSchemaName>
+      <RefTableName>USER_PRODUCTS</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="31" parent="12" name="user_id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="32" parent="12" name="user_profile_id">
+      <Position>2</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="33" parent="12" name="FK_USER_PROFILE">
+      <ColNames>user_profile_id</ColNames>
+    </index>
+    <key id="34" parent="12" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>user_id
+user_profile_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="35" parent="12" name="FK_APP_USER">
+      <ColNames>user_id</ColNames>
+      <RefSchemaName>dajoSellers</RefSchemaName>
+      <RefTableName>APP_USER</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="36" parent="12" name="FK_USER_PROFILE">
+      <ColNames>user_profile_id</ColNames>
+      <RefSchemaName>dajoSellers</RefSchemaName>
+      <RefTableName>USER_PROFILE</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="37" parent="13" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="38" parent="13" name="code_product">
+      <Position>2</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="39" parent="13" name="des_product">
+      <Position>3</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="40" parent="13" name="image_product">
+      <Position>4</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="41" parent="13" name="pathImage_product">
+      <Position>5</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="42" parent="13" name="type">
+      <Position>6</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="43" parent="13" name="code_product">
+      <ColNames>code_product</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="44" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="45" parent="13" name="code_product">
+      <ColNames>code_product</ColNames>
+      <UnderlyingIndexName>code_product</UnderlyingIndexName>
+    </key>
+    <column id="46" parent="14" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="47" parent="14" name="type">
+      <Position>2</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="48" parent="14" name="type">
+      <ColNames>type</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="49" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="50" parent="14" name="type">
+      <ColNames>type</ColNames>
+      <UnderlyingIndexName>type</UnderlyingIndexName>
+    </key>
+    <column id="51" parent="15" name="username">
+      <Position>1</Position>
+      <DataType>varchar(64)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="52" parent="15" name="series">
+      <Position>2</Position>
+      <DataType>varchar(64)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="53" parent="15" name="token">
+      <Position>3</Position>
+      <DataType>varchar(64)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="54" parent="15" name="last_used">
+      <Position>4</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <key id="55" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>series</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
