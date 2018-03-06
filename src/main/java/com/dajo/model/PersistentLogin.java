@@ -30,15 +30,7 @@ public class PersistentLogin implements Serializable{
 		return series;
 	}
 //nuevo
-public String nuevaA(){
-	
-	
-}
-public String nuevaB(){
-	
-	
-}
-public String nuevaC(){
+public void nuevaA() {
 	
 	
 }
