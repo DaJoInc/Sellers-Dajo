@@ -29,6 +29,15 @@ public class PersistentLogin implements Serializable{
 	public String getSeries() {
 		return series;
 	}
+//nuevo
+public String nuevaA(){
+	
+	
+}
+public String nuevaB(){
+	
+	
+}
 
 	public void setSeries(String series) {
 		this.series = series;
