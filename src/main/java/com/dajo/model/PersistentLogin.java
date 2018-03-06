@@ -38,6 +38,10 @@ public String nuevaB(){
 	
 	
 }
+public String nuevaC(){
+	
+	
+}
 
 	public void setSeries(String series) {
 		this.series = series;
